@@ -19,8 +19,13 @@ case $BLOCK_BUTTON in
 esac
 
 case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-	down) wifiicon=" " ;;
+  down) case "$(cat /sys/class/net/e*/operstate 2>/dev/null || echo )" in
+          down) ethicon=""; wifiicon="" ;;
+          up) ethicon=" " ;;
+          *) ethicon="" ;;
+        esac
+        wifiicon="" ;;
 	up) wifiicon="$(awk '/^\s*w/ { print "^c#88C0D0^  ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)" ;;
 esac
 
-printf "%s%s\n" "$wifiicon" "$(sed "s/down//;s/up/   /" /sys/class/net/e*/operstate 2>/dev/null)"
+printf "%s%s\n" "$wifiicon" "$ethicon"
