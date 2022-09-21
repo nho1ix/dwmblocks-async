@@ -18,9 +18,36 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
+con_quality=$(awk '/^\s*w/ { print int($3 * 100 / 70) }' /proc/net/wireless) || break
+
 case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-	down) wifiicon=" " ;;
-	up) wifiicon="$(awk '/^\s*w/ { print "^c#88C0D0^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)" ;;
+  down) case "$(cat /sys/class/net/e*/operstate 2>/dev/null || echo )" in
+          down) ethicon=""; wifiicon="" ;;
+          up) ethicon=" " ;;
+          *) ethicon="" ;;
+        esac
+        wifiicon="" ;;
+  up) if [ "$con_quality" -gt 90 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#6db111^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+  elif [ "$con_quality" -gt 80 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#76b111^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+  elif [ "$con_quality" -gt 70 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#9ebe02^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+  elif [ "$con_quality" -gt 60 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#b5c402^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+  elif [ "$con_quality" -gt 50 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#cdca09^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+  elif [ "$con_quality" -gt 40 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#eea900^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+  elif [ "$con_quality" -gt 30 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#ea8b00^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+  elif [ "$con_quality" -gt 20 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#e36b02^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+  elif [ "$con_quality" -gt 10 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#d94912^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+  elif [ "$con_quality" -gt 1 ]; then
+    wifiicon="$(awk '/^\s*w/ { print "^c#cc1d1d^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+      fi
 esac
 
-printf "%s%s\n" "$wifiicon" "$(sed "s/down//;s/up/   /" /sys/class/net/e*/operstate 2>/dev/null)"
+printf "%s%s\n" "$wifiicon" "$ethicon"
