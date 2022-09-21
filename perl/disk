@@ -7,4 +7,4 @@
 
 #df -h | awk '/encrypted/ {printf "  " $3}'
 #df -h | grep encrypted | awk '{printf "  " $3 " : " $5}'
-printf "^c#86C154^%s^d^ %s" " " "$(df -h | grep encrypted | awk '{printf $3 " : " $5}')"
+printf "^c#86C154^%s^d^ %s" " " "$(df -h | grep mmcblk2p2 | awk '{printf $3 " : " $5}')"
