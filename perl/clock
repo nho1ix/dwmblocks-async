@@ -3,19 +3,19 @@
 clock=$(date '+%I')
 
 case "$clock" in
-	"00") icon="^c#ECBE60^ ^d^" ;;
-	"01") icon="^c#ECBE60^ ^d^" ;;
-	"02") icon="^c#ECBE60^ ^d^" ;;
-	"03") icon="^c#ECBE60^ ^d^" ;;
-	"04") icon="^c#ECBE60^ ^d^" ;;
-	"05") icon="^c#ECBE60^ ^d^" ;;
-	"06") icon="^c#ECBE60^ ^d^" ;;
-	"07") icon="^c#ECBE60^ ^d^" ;;
-	"08") icon="^c#ECBE60^ ^d^" ;;
-	"09") icon="^c#ECBE60^ ^d^" ;;
-	"10") icon="^c#ECBE60^ ^d^" ;;
-	"11") icon="^c#ECBE60^ ^d^" ;;
-	"12") icon="^c#ECBE60^ ^d^" ;;
+	"00") icon="^c#ECBE60^  ^d^" ;;
+	"01") icon="^c#ECBE60^  ^d^" ;;
+	"02") icon="^c#ECBE60^  ^d^" ;;
+	"03") icon="^c#ECBE60^  ^d^" ;;
+	"04") icon="^c#ECBE60^  ^d^" ;;
+	"05") icon="^c#ECBE60^  ^d^" ;;
+	"06") icon="^c#ECBE60^  ^d^" ;;
+	"07") icon="^c#ECBE60^  ^d^" ;;
+	"08") icon="^c#ECBE60^  ^d^" ;;
+	"09") icon="^c#ECBE60^  ^d^" ;;
+	"10") icon="^c#ECBE60^  ^d^" ;;
+	"11") icon="^c#ECBE60^  ^d^" ;;
+	"12") icon="^c#ECBE60^  ^d^" ;;
 esac
 
 #       3) notify-send "📅 Time/date module" "\- Left click to show upcoming appointments for the next three days via \`calcurse -d3\` and show the month via \`cal\`
