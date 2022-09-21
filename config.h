@@ -8,6 +8,7 @@ const Block blocks[] = {
 	BLOCK("sb-cpu",         1,   19),
 	BLOCK("sb-weather", 18000,   20),
 	BLOCK("sb-volume",      0,   10),
+	// BLOCK("sb-battery",     120,  3),
 	BLOCK("sb-clock",       1,   26),
 	BLOCK("sb-internet",    7,   27),
 };
