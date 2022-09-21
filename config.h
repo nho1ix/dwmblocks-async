@@ -1,16 +1,13 @@
 #define CMDLENGTH 45
-#define DELIMITER "  "
+#define DELIMITER " "
 #define CLICKABLE_BLOCKS
 
 const Block blocks[] = {
-	BLOCK("sb-mail",    1800, 17),
-	BLOCK("sb-music",   0,    18),
-	BLOCK("sb-disk",    1800, 19),
-	BLOCK("sb-memory",  10,   20),
-	BLOCK("sb-loadavg", 5,    21),
-	BLOCK("sb-mic",     0,    26),
-	BLOCK("sb-record",  0,    27),
-	BLOCK("sb-volume",  0,    22),
-	BLOCK("sb-battery", 5,    23),
-	BLOCK("sb-date",    1,    24)
+	BLOCK("sb-disk",    14400,   17),
+	BLOCK("sb-memory",      1,   18),
+	BLOCK("sb-cpu",         1,   19),
+	BLOCK("sb-weather", 18000,   20),
+	BLOCK("sb-volume",      0,   10),
+	BLOCK("sb-clock",       1,   26),
+	BLOCK("sb-internet",    7,   27),
 };
