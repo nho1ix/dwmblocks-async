@@ -30,4 +30,4 @@ else
 	icon="  "
 fi
 
-printf "^c#99c1e9^ %s^d^^c#e1e1e1^%s^d^\n" "$icon" "$vol%"
+printf "^c#99c1e9^ %s^d^^c#FFFFFF^%s^d^\n" "$icon" "$vol%"
