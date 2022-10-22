@@ -1,0 +1,19 @@
+#!/bin/sh
+spxs() {
+. $HOME/.config/suckless/dwmblocks/perl/stock SPXS | awk '{printf ("%.2f ", $3+0.005)}'
+}
+
+spxs_dc=$(. $HOME/.config/suckless/dwmblocks/perl/stock SPXS | awk '{print $4}')
+round_dc() {
+  echo $spxs_dc | awk '{printf "%.0f", $1}'
+}
+
+if [ $(bc <<< "$(round_dc)") -gt 0 ]; then
+  spxs_daily="$(. $HOME/.config/suckless/dwmblocks/perl/stock SPXS | awk '{print $4}')";
+  echo "^c#e1b55b^\$$(spxs)"^c#6db111^$spxs_dc ^d^
+else
+  spxs_daily="$(. $HOME/.conig/suckless/dwmblo cks/perl/stock | awk '{print $4}')";
+  echo "^c#e1b55b^\$$(spxs)"^c#d13232^$spxs_dc ^d^
+fi
+
+# echo "$(spxs)"$spxs_daily
