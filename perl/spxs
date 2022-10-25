@@ -12,7 +12,7 @@ if [ $(bc <<< "$(round_dc)") -gt 0 ]; then
   spxs_daily="$(. $HOME/.config/suckless/dwmblocks/perl/stock SPXS | awk '{print $4}')";
   echo "^c#e1b55b^\$$(spxs)"^c#6db111^$spxs_dc ^d^
 else
-  spxs_daily="$(. $HOME/.conig/suckless/dwmblo cks/perl/stock | awk '{print $4}')";
+  spxs_daily="$(. $HOME/.config/suckless/dwmblocks/perl/stock | awk '{print $4}')";
   echo "^c#e1b55b^\$$(spxs)"^c#d13232^$spxs_dc ^d^
 fi
 
