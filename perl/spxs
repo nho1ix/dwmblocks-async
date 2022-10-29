@@ -8,12 +8,14 @@ round_dc() {
   echo $spxs_dc | awk '{printf "%.0f", $1}'
 }
 
+. sb-theme
+
 if [ $(bc <<< "$(round_dc)") -gt 0 ]; then
   spxs_daily="$(. $HOME/.config/suckless/dwmblocks/perl/stock SPXS | awk '{print $4}')";
-  echo "^c#e1b55b^\$$(spxs)"^c#6db111^$spxs_dc ^d^
+  echo "^c$color_price^\$$(spxs)"^c$color_change^$spxs_dc ^d^
 else
   spxs_daily="$(. $HOME/.config/suckless/dwmblocks/perl/stock | awk '{print $4}')";
-  echo "^c#e1b55b^\$$(spxs)"^c#d13232^$spxs_dc ^d^
+  echo "^c$color_price^\$$(spxs)"^c$color_change^$spxs_dc ^d^
 fi
 
 # echo "$(spxs)"$spxs_daily

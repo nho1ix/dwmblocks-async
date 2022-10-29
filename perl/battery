@@ -32,25 +32,25 @@ do
 	if [ "$capacity" -gt 90 ]; then
 	        status=$(sed "s/[Dd]ischarging/^c#5faf1b^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 80 ]; then
-	        status=$(sed "s/[Dd]ischarging/^c#76b214^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
+	        status=$(sed "s/[Dd]ischarging/^c#6db117^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 75 ]; then
-	        status=$(sed "s/[Dd]ischarging/^c#8cb60e^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
+	        status=$(sed "s/[Dd]ischarging/^c#78b314^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 70 ]; then
-	        status=$(sed "s/[Dd]ischarging/^c#8db80d^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
+	        status=$(sed "s/[Dd]ischarging/^c#83b511^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 60 ]; then
-	        status=$(sed "s/[Dd]ischarging/^c#b4bb11^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
+	        status=$(sed "s/[Dd]ischarging/^c#8cb60e^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 50 ]; then
-	        status=$(sed "s/[Dd]ischarging/^c#beb000^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
-       elif [ "$capacity" -gt 40 ]; then
 	        status=$(sed "s/[Dd]ischarging/^c#c7a500^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
-       elif [ "$capacity" -gt 30 ]; then
+       elif [ "$capacity" -gt 40 ]; then
 	        status=$(sed "s/[Dd]ischarging/^c#ce9900^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
+       elif [ "$capacity" -gt 30 ]; then
+	        status=$(sed "s/[Dd]ischarging/^c#cb8800^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 25 ]; then
-	        status=$(sed "s/[Dd]ischarging/^c#ca7d00^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
+	        status=$(sed "s/[Dd]ischarging/^c#cc77600^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 20 ]; then
-	        status=$(sed "s/[Dd]ischarging/^c#c45e00^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
+	        status=$(sed "s/[Dd]ischarging/^c#c15300^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 10 ]; then
-	        status=$(sed "s/[Dd]ischarging/^c#bc3d00^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
+	        status=$(sed "s/[Dd]ischarging/^c#bb3100^ ^d^/;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 5 ]; then
 	        status=$(sed "s/[Dd]ischarging/^c#b20000^ /;s/[Nn]ot charging/  /;s/[Cc]harging/   /;s/[Uu]nknown//;s/[Ff]ull/ /" "$battery"/status)
        elif [ "$capacity" -gt 1 ]; then

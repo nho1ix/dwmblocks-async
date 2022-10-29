@@ -28,25 +28,25 @@ case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
         esac
         wifiicon="" ;;
   up) if [ "$con_quality" -gt 90 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#6db111^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#5faf1b^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   elif [ "$con_quality" -gt 80 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#76b111^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#6db117^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   elif [ "$con_quality" -gt 70 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#9ebe02^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#83b511^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   elif [ "$con_quality" -gt 60 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#b5c402^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#8cb60e^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   elif [ "$con_quality" -gt 50 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#cdca09^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#c7a500^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   elif [ "$con_quality" -gt 40 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#eea900^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#ce9900^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   elif [ "$con_quality" -gt 30 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#ea8b00^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#cb8800^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   elif [ "$con_quality" -gt 20 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#e36b02^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#c15300^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   elif [ "$con_quality" -gt 10 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#d94912^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#bb3100^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   elif [ "$con_quality" -gt 1 ]; then
-    wifiicon="$(awk '/^\s*w/ { print "^c#cc1d1d^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+    wifiicon="$(awk '/^\s*w/ { print "^c#b20000^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
       fi
 esac
 

@@ -12,9 +12,11 @@ esac
 # For only CPU usage %
 #top -bn 1 | awk '/^%Cpu/ {print "CPU: " int($2 + $4 + $6)"%"}'
 
+. sb-theme
+
 icon="  " 
 cpu=$(top -bn 1 | awk '/^%Cpu/ {print int($2 + $4 + $6)"%"}') 
-printf "%s\n" "^c#C14652^$icon^d^""$cpu"
+printf "%s\n" "^c$color^$icon^d^""$cpu"
 
 # For both CPU usage % and temperature
 # echo -n $(top -bn 1 | awk '/^%Cpu/ {print "CPU: " int($2 + $4 + $6)"%"}' && sensors | awk '/Tctl/ {print $2}')
