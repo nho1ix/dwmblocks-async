@@ -12,10 +12,6 @@ count1="$(qgmail request users.labels.get me INBOX | jq .messagesUnread)"
 output=""
 if [ "$count1" != "null" ]; then
     output="^c#ad80fe^ ^d^ $count1"
-    [ "$count2" != "null" ] && output="$output $count2"
-    # [ "$count2" != "null" ] && output="$output  $count2"
-else
-    [ "$count2" != "null" ] && output="$count2"
 fi
 
 [ -z "$output" ] && exit

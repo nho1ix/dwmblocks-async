@@ -4,7 +4,7 @@
 
 const Block blocks[] = {
 	BLOCK("sb-spxs",    18000,   23),
-	BLOCK("sb-mail",    18000,   28),
+	// BLOCK("sb-mail",    18000,   28),
 	BLOCK("sb-disk",    14400,   17),
 	BLOCK("sb-swap",        1,   24),
 	BLOCK("sb-memory",      1,   18),
