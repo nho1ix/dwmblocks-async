@@ -6,9 +6,6 @@ case "$(basename $0)" in
   sb-clock) color=#ECBE60 ;;
   sb-swap) color=#ffc517 ;;
   sb-disk) color=#86C154 ;;
-  sb-spxs) 
-    color_price=#e1b55b
-    color_change=#d13232 ;;
   sb-volume) color=#99c1e9 ;;
   *) color=#FFFFFF ;;
 esac

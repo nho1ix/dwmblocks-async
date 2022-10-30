@@ -2,6 +2,7 @@
 
 # Prints the current volume or 🔇 if muted.
 
+. sb-theme
 case $BLOCK_BUTTON in
 	1) setsid -f "$TERMINAL" -e pavucontrol ;;
 	2) pamixer -t ;;
@@ -15,7 +16,7 @@ case $BLOCK_BUTTON in
 esac
 
 #[ $(pamixer --get-mute) = true ] && echo 🔇 && exit
-[ $(pamixer --get-mute) = true ] && echo  Muted && exit
+[ $(pamixer --get-mute) = true ] && echo ^c$color^^d^ Muted && exit
 
 vol="$(pamixer --get-volume)"
 
@@ -30,5 +31,4 @@ else
 	icon="  "
 fi
 
-. sb-theme
 printf "^c$color^%s^d^%s\n" "$icon" "$vol%"
