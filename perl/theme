@@ -2,7 +2,7 @@
 
 case "$(basename $0)" in 
   sb-cpu) color=#C14652 ;;
-  sb-memory) color=#ffc517 ;;
+  sb-memory) color=#c27edd ;;
   sb-clock) color=#ECBE60 ;;
   sb-swap) color=#ffc517 ;;
   sb-disk) color=#86C154 ;;

@@ -9,7 +9,7 @@ const Block blocks[] = {
 	BLOCK("sb-swap",        1,   24),
 	BLOCK("sb-memory",      1,   18),
 	BLOCK("sb-cpu",         1,   19),
-	BLOCK("sb-weather",     0,   20),
+	// BLOCK("sb-weather",     0,   20),
 	BLOCK("sb-volume",      0,   10),
 	// BLOCK("sb-battery",     120,  3),
 	BLOCK("sb-clock",       1,   26),
