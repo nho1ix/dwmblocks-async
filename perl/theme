@@ -7,5 +7,7 @@ case "$(basename $0)" in
   sb-swap) color=#ffc517 ;;
   sb-disk) color=#86C154 ;;
   sb-volume) color=#99c1e9 ;;
+  sb-music_name) color=#ced2d9 ;;
+  sb-music_time) color=#ced2d9 ;;
   *) color=#FFFFFF ;;
 esac
