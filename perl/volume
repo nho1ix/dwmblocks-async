@@ -22,13 +22,13 @@ vol="$(pamixer --get-volume)"
 
 if [ "$vol" -gt "70" ]; then
 #	icon="🔊"
-	icon="  "
+	icon=" "
 elif [ "$vol" -lt "35" ]; then
 #	icon="🔈"
-	icon="  "
+	icon=" "
 else
 #	icon="🔉"
-	icon="  "
+	icon=" "
 fi
 
 printf "^c$color^%s^d^%s\n" "$icon" "$vol%"

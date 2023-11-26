@@ -14,7 +14,7 @@ esac
 
 . sb-theme
 
-icon="  " 
+icon=" " 
 cpu=$(top -bn 1 | awk '/^%Cpu/ {print int($2 + $4 + $6)"%"}') 
 printf "%s\n" "^c$color^$icon^d^""$cpu"
 
