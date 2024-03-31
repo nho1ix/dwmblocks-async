@@ -17,7 +17,7 @@
 #define TRAILING_DELIMITER 0
 
 #define BLOCKS(X)         \
-	X("sb-stock",    3600,   23) \
+	/* X("sb-stock",    3600,   23) */ \
 	/* X("sb-mail",    18000,   28) */ \
 	X("sb-disk",        0,   17) \
 	X("sb-swap",        1,   24) \
