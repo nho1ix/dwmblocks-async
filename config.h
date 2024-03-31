@@ -19,11 +19,12 @@
 #define BLOCKS(X)         \
 	/* X("sb-stock",    3600,   23) */ \
 	/* X("sb-mail",    18000,   28) */ \
+	X("sb-rain",     0,   21) \
+	X("sb-weather",     0,   20) \
 	X("sb-disk",        0,   17) \
 	X("sb-swap",        1,   24) \
 	X("sb-memory",      1,   18) \
 	X("sb-cpu",         1,   19) \
-	/* X("sb-weather",     0,   20) */ \
 	X("sb-volume",      0,   10) \
 	/* X("sb-battery",     120,  3) */ \
 	X("sb-clock",       1,   26) \

@@ -11,3 +11,8 @@ case "$(basename $0)" in
   sb-music_time) color=#ced2d9 ;;
   *) color=#FFFFFF ;;
 esac
+
+# Weather colors
+rain="#c7c7c7"
+wl="#99c1e9"
+wh="#ffc517"
