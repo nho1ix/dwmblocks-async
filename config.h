@@ -5,7 +5,7 @@
 #define DELIMITER "  "
 
 // Maximum number of Unicode characters that a block can output.
-#define MAX_BLOCK_OUTPUT_LENGTH 45
+#define MAX_BLOCK_OUTPUT_LENGTH 100 
 
 // Control whether blocks are clickable.
 #define CLICKABLE_BLOCKS 1
@@ -17,10 +17,12 @@
 #define TRAILING_DELIMITER 0
 
 #define BLOCKS(X)         \
-	/* X("sb-stock",    3600,   23) */ \
-	/* X("sb-mail",    18000,   28) */ \
+	/* X("sb-stock",    3600,   23) \ */ \
+	/* X("sb-mail",    18000,   28) \ */ \
+	/* X("sb-music_name",     0,   22) */ \
+	/* X("sb-music_time",     1,   23) */ \
+	X("sb-weather",     18000,   20) \
 	X("sb-rain",     0,   21) \
-	X("sb-weather",     0,   20) \
 	X("sb-disk",        0,   17) \
 	X("sb-swap",        1,   24) \
 	X("sb-memory",      1,   18) \

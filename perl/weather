@@ -37,5 +37,5 @@ esac
 
 . sb-theme
 
-#printf "^c$wl^%s %s^d^/^c$wh^%s^d^" "$(rain_chance)" "$(weather_low)" "$(weather_high)"
-printf "^c$wl^%s^d^/^c$wh^%s^d^" "$(weather_low)" "$(weather_high)"
+printf "^c$wl^%s^d^/^c$wh^%s^d^^c$rain^%s^d^" "$(weather_low)" "$(weather_high)" "$(rain_chance)"
+# printf "^c$wl^%s^d^/^c$wh^%s^d^" "$(weather_low)" "$(weather_high)"

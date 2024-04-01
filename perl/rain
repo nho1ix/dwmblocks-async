@@ -1,9 +1,0 @@
-#!/bin/sh
-
-. sb-theme
-weatherreport="${XDG_CACHE_HOME:-$HOME/.cache}/weatherreport"
-getforecast() { curl -sf "wttr.in/$LOCATION" > "$weatherreport" || exit 1 ;}
-rain_chance() { printf "%s" "$(sed '16q;d' "$weatherreport" | grep -wo "[0-9]*%" | sort -rn | sed "s/^/  /g;1q" | tr -d '\n')" ;}
-
-
-printf "^c$rain^%s^d^" "$(rain_chance)"
