@@ -17,6 +17,8 @@ memory() {
 	free | grep Mem | awk '{print $3/$2 * 100.0}' | sed 's/\./ /g' | awk '{print $1}'
 }
 
-printf "^c$color^%s^d^%s" "  " "$(memory)%"
+printf "^c$color^%s^d^%s" " " "$(memory)%"
 
 # Brain Icon in case I ever need it 🧠 
+
+

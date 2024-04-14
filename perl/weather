@@ -14,9 +14,10 @@ getforecast() { curl -sf "wttr.in/$LOCATION" > "$weatherreport" || exit 1 ;}
 # display them with coresponding emojis.
 showweather() { printf "%s" "$(sed '16q;d' "$weatherreport" | grep -wo "[0-9]*%" | sort -rn | sed "s/^/  /g;1q" | tr -d '\n')" sed '13q;d' "$weatherreport" | grep -o "m\\([-+]\\)*[0-9]\\+" | sed 's/+//g' | sort -n -t 'm' -k 2n | sed -e 1b -e '$!d' | tr '\n|m' ' ' | awk '{print " " $1 "°/","" $2 "°"}' ;}
 
-rain_chance() { printf "%s" "$(sed '16q;d' "$weatherreport" | grep -wo "[0-9]*%" | sort -rn | sed "s/^/  /g;1q" | tr -d '\n')" ;}
+rain_chance() { printf "%s" "$(sed '16q;d' "$weatherreport" | grep -wo "[0-9]*%")" | sed 's/%//' | paste -sd+ | bc | awk '{printf "%d",(($1/4)+0.5)}' | sed "s/^/  /g;1q" | tr -d '\n' ;}
 weather_low() { sed '13q;d' "$weatherreport" | grep -o "m\\([-+]\\)*[0-9]\\+" | sed 's/+//g' | sort -n -t 'm' -k 2n | sed -e 1b -e '$!d' | tr '\n|m' ' ' | awk '{print $1 "F"}' ;}
 weather_high() { sed '13q;d' "$weatherreport" | grep -o "m\\([-+]\\)*[0-9]\\+" | sed 's/+//g' | sort -n -t 'm' -k 2n | sed -e 1b -e '$!d' | tr '\n|m' ' ' | awk '{print $2 "F"}' ;}
+current_temp() { sed '4q;d' "$weatherreport" | grep -o "m\\([-+]\\)*[0-9]\\+" | tr '\n|m' ' ' | awk '{print $1 "F"}';}
 # °
 
 case $BLOCK_BUTTON in
@@ -32,10 +33,11 @@ esac
 
 # The test if our forcecast is updated to the day. If it isn't download a new
 # weather report from wttr.in with the above function.
-[ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
-	getforecast
+# [ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
+getforecast
 
 . sb-theme
 
-printf "^c$wl^%s^d^/^c$wh^%s^d^^c$rain^%s^d^" "$(weather_low)" "$(weather_high)" "$(rain_chance)"
+printf "^c$wh^%s^d^^c$rain^%s^d^" "$(current_temp | sed 's/+//')" "$(rain_chance)%"
+# printf "^c$wl^%s^d^/^c$wh^%s^d^^c$rain^%s^d^" "$(weather_low)" "$(weather_high)" "$(rain_chance)%"
 # printf "^c$wl^%s^d^/^c$wh^%s^d^" "$(weather_low)" "$(weather_high)"

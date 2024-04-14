@@ -27,7 +27,7 @@ case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
           *) ethicon="" ;;
         esac
         wifiicon="" ;;
-  up) wifiicon="^c#5faf1b^  ^d^"
+  up) wifiicon="^c#5faf1b^ ^d^"
   	# if [ "$con_quality" -gt 90 ]; then
   #   wifiicon="$(awk '/^\s*w/ { print "^c#5faf1b^   ^d^", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
   # elif [ "$con_quality" -gt 80 ]; then
