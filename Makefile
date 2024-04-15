@@ -10,7 +10,7 @@ VERBOSE := 0
 LIBS := xcb-atom
 
 PREFIX := /usr/local
-CFLAGS := -Ofast -march=native -I. -I$(INC_DIR) -std=c99
+CFLAGS := -march=native -flto=auto -O2 -ffast-math -I. -I$(INC_DIR) -std=c99
 CFLAGS += -DBINARY=\"$(BIN)\" -D_POSIX_C_SOURCE=200809L
 CFLAGS += -Wall -Wpedantic -Wextra -Wswitch-enum
 CFLAGS += $(shell pkg-config --cflags $(LIBS))
