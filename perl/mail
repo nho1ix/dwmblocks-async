@@ -15,5 +15,5 @@ if [ "$count1" != "null" ]; then
 fi
 
 [ -z "$output" ] && exit
-# . sb-theme
+# . theme
 printf "$output" 

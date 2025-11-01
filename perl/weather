@@ -36,7 +36,7 @@ esac
 # [ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] ||
 getforecast
 
-. sb-theme
+. theme
 
 printf "^c$wh^%s^d^^c$rain^%s^d^" "$(current_temp | sed 's/+//')" "$(rain_chance)%"
 # printf "^c$wl^%s^d^/^c$wh^%s^d^^c$rain^%s^d^" "$(weather_low)" "$(weather_high)" "$(rain_chance)%"

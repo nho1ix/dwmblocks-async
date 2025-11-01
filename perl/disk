@@ -5,7 +5,7 @@
    6) "$TERMINAL" -e "vim" "$0" ;;
  esac
 
-. sb-theme
+. theme
 #df -h | awk '/encrypted/ {printf "  " $3}'
 #df -h | grep encrypted | awk '{printf "  " $3 " : " $5}'
-printf "^c$color^%s^d^ %s" " " "$(df -h | grep '/h' | awk 'NR==1{printf $3 "/" $5}')"
+printf "^c$color^%s^d^ %s" "" "$(df -h | grep '/h' | awk 'NR==1{printf $3 "/" $5}')"

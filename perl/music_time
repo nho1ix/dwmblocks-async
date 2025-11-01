@@ -7,6 +7,6 @@ end_cap="]"
 position_length=$(playerctl -p spotify metadata --format "$begin_cap{{duration(position)}}$delimiter{{duration(mpris:length)}}$end_cap")
 # Show time remaining in song
 time_left=$(playerctl -p spotify metadata --format "{{duration(mpris:length - position)}}")
-. sb-theme
+. theme
 # printf "%s" "| ($music_time)" 
 printf "^c$color^%s^d^" "$position_length"

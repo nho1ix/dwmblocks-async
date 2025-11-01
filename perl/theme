@@ -1,14 +1,14 @@
 #!/bin/sh
 
 case "$(basename $0)" in 
-  sb-cpu) color=#C73636 ;;
-  sb-memory) color=#e3a26f ;;
-  sb-clock) color=#ECBE60 ;;
-  sb-swap) color=#ffc517 ;;
-  sb-disk) color=#86C154 ;;
-  sb-volume) color=#99c1e9 ;;
-  sb-music_name) color=#ced2d9 ;;
-  sb-music_time) color=#ECBE60 ;;
+  cpu) color=#C73636 ;;
+  memory) color=#e3a26f ;;
+  clock) color=#ECBE60 ;;
+  swap) color=#ffc517 ;;
+  disk) color=#86C154 ;;
+  volume) color=#99c1e9 ;;
+  music_name) color=#ced2d9 ;;
+  music_time) color=#ECBE60 ;;
   *) color=#FFFFFF ;;
 esac
 

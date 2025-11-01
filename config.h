@@ -17,12 +17,12 @@
 #define TRAILING_DELIMITER 0
 
 #define BLOCKS(X)           \
-	X("", "sb-weather", 3600, 20) \
-	X("", "sb-disk", 0, 17)       \
+	X("", "weather", 3600, 20) \
+	X("", "disk", 0, 17)       \
 	/* X("", "sb-swap", 1, 24) */      \
-	X("", "sb-memory", 1, 18)     \
-	X("", "sb-cpu", 1, 19)        \
-	X("", "sb-volume", 0, 10)     \
-	X("", "sb-clock", 1, 26)      \
-	X("", "sb-internet", 6, 27)
+	X("", "memory", 1, 18)     \
+	X("", "cpu", 1, 19)        \
+	X("", "volume", 0, 10)     \
+	X("", "clock", 1, 26)      \
+	X("", "internet", 6, 27)
 #endif  // CONFIG_H

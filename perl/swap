@@ -9,7 +9,7 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-. sb-theme
+. theme
 
 #free --mebi | sed -n '2{p;q}' | awk '{printf ("   %2.2fGiB/%2.2fGiB\n", ( $3 / 1024), ($2 / 1024))}' # memory in X.X GB form
 swap() { 

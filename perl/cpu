@@ -12,7 +12,7 @@ esac
 # For only CPU usage %
 #top -bn 1 | awk '/^%Cpu/ {print "CPU: " int($2 + $4 + $6)"%"}'
 
-. sb-theme
+. theme
 
 icon=" " 
 cpu=$(top -bn 1 | awk '/^%Cpu/ {print int($2 + $4 + $6)"%"}') 
